@@ -1,5 +1,9 @@
+/* eslint-disable react/jsx-key */
+/* eslint-disable react/prop-types */
+/* eslint-disable no-unused-vars */
+
 const Course = ({ course, handleAddCourse }) => {
-  const { img, name, description, price, credit } = course;
+  const { img, name, description, price, credit, priceIcon, creditIcon } = course;
 
   return (
     <div className="card w-full bg-base-100 shadow-xl">
@@ -10,8 +14,11 @@ const Course = ({ course, handleAddCourse }) => {
         <h2 className="card-title">{name}</h2>
         <p>{description}</p>
         <div className="flex justify-between items-center my-5">
-          <p>$ Price : {price}</p>
-          <p>Credit : {credit}hr</p>
+          <img src={priceIcon} alt="" />
+          <p className="ml-1"> Price : {price}</p>
+
+          <img src={creditIcon} alt="" />
+          <p className="ml-2"> Credit : {credit}hr</p>
         </div>
 
         <button

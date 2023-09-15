@@ -1,3 +1,8 @@
+/* eslint-disable react/jsx-key */
+/* eslint-disable react/prop-types */
+/* eslint-disable no-unused-vars */
+
+
 const CourseCart = ({
   selectedCourse,
   totalHour,
@@ -10,7 +15,7 @@ const CourseCart = ({
         <p className=" pt-8 text-xl font-bold text-blue-500">
           Credit Hour Remaining {remainingHour} hr
         </p>
-        <hr className="w-3/4 mx-auto my-4" />
+        <hr className="my-4" />
         <h2 className="mb-3 text-xl font-bold ">Course Name</h2>
         <div className="card-body pt-0 px-0">
           {selectedCourse.map((course, idx) => (
@@ -21,9 +26,9 @@ const CourseCart = ({
             </div>
           ))}
           <div>
-            <hr className="w-3/4 mx-auto my-4" />
+            <hr className="my-4" />
             <h2 className="font-semibold">Total Credit Hour : {totalHour}</h2>
-            <hr className="w-3/4 mx-auto my-4" />
+            <hr className="my-4" />
             <h2 className="font-semibold">Total Price : {totalCost} USD</h2>
           </div>
         </div>

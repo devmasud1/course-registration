@@ -1,3 +1,6 @@
+/* eslint-disable react/jsx-key */
+/* eslint-disable react/prop-types */
+/* eslint-disable no-unused-vars */
 import { useEffect, useState } from "react";
 import Course from "../Course/Course";
 import CourseCart from "../CourseCart/CourseCart";
@@ -39,7 +42,7 @@ const Courses = () => {
 
     if (currentHours > 20) {
       return swal({
-        title: "Your remaining hours 0",
+        title: `Your remaining hours ${remainingHour}`,
         text: "You cannot purchase more than 20 hours of courses",
         icon: "warning",
         dangerMode: true,
@@ -55,10 +58,10 @@ const Courses = () => {
   };
 
   return (
-    <div className="flex justify-between gap-10">
+    <div className="lg:flex lg:justify-between lg:gap-10 gap-16">
       <div className="w-full lg:w-3/4 ">
         {
-          <div className="grid grid-cols-3">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
             {course.map((course) => (
               <Course
                 course={course}

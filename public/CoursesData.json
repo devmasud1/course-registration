@@ -5,7 +5,9 @@
     "name": "Introduction C Programming",
     "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
     "price": 150,
-    "credit": 1
+    "credit": 1,
+    "priceIcon":"https://i.ibb.co/Yc5yXjL/dollar-sign-1.png",
+    "creditIcon": "https://i.ibb.co/F3xmvRR/Frame.png"
   },
   {
     "id": 2,
@@ -13,7 +15,9 @@
     "name": "Introduction to Algorithms",
     "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
     "price": 250,
-    "credit": 2
+    "credit": 2,
+    "priceIcon":"https://i.ibb.co/Yc5yXjL/dollar-sign-1.png",
+    "creditIcon": "https://i.ibb.co/F3xmvRR/Frame.png"
   },
   {
     "id": 3,
@@ -21,7 +25,9 @@
     "name": "Introduction to C++ for DSA",
     "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
     "price": 100,
-    "credit": 10
+    "credit": 10,
+    "priceIcon":"https://i.ibb.co/Yc5yXjL/dollar-sign-1.png",
+    "creditIcon": "https://i.ibb.co/F3xmvRR/Frame.png"
   },
   {
     "id": 4,
@@ -29,7 +35,9 @@
     "name": "Basic Data Structures",
     "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
     "price": 350,
-    "credit": 5
+    "credit": 5,
+    "priceIcon":"https://i.ibb.co/Yc5yXjL/dollar-sign-1.png",
+    "creditIcon": "https://i.ibb.co/F3xmvRR/Frame.png"
   },
   {
     "id": 5,
@@ -37,7 +45,9 @@
     "name": "Introduction to OOP Python",
     "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
     "price": 190,
-    "credit": 5
+    "credit": 5,
+    "priceIcon":"https://i.ibb.co/Yc5yXjL/dollar-sign-1.png",
+    "creditIcon": "https://i.ibb.co/F3xmvRR/Frame.png"
   },
   {
     "id": 6,
@@ -45,7 +55,9 @@
     "name": "ISoftware Engineering",
     "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
     "price": 230,
-    "credit": 2
+    "credit": 2,
+    "priceIcon":"https://i.ibb.co/Yc5yXjL/dollar-sign-1.png",
+    "creditIcon": "https://i.ibb.co/F3xmvRR/Frame.png"
   },
   {
     "id": 7,
@@ -53,7 +65,9 @@
     "name": "AWS, Cloud Computing",
     "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
     "price": 350,
-    "credit": 5
+    "credit": 5,
+    "priceIcon":"https://i.ibb.co/Yc5yXjL/dollar-sign-1.png",
+    "creditIcon": "https://i.ibb.co/F3xmvRR/Frame.png"
   },
   {
     "id": 8,
@@ -61,7 +75,9 @@
     "name": "Database (MySQL)",
     "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
     "price": 190,
-    "credit": 5
+    "credit": 5,
+    "priceIcon":"https://i.ibb.co/Yc5yXjL/dollar-sign-1.png",
+    "creditIcon": "https://i.ibb.co/F3xmvRR/Frame.png"
   },
   {
     "id": 9,
@@ -69,6 +85,8 @@
     "name": "Problem-Solving Part",
     "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
     "price": 230,
-    "credit": 2
+    "credit": 2,
+    "priceIcon":"https://i.ibb.co/Yc5yXjL/dollar-sign-1.png",
+    "creditIcon": "https://i.ibb.co/F3xmvRR/Frame.png"
   }
 ]
