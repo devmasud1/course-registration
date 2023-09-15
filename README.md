@@ -1,9 +1,9 @@
 # Project Discussion
 
 Features: 
-- user purchased any course click on the select button.
-- one user can't purchase a course more than once.
-- No more than 20 hours of courses can be purchased at the same time.
+- Clicking on the 'Select' button allows you to add any course.
+- A user cannot add a course more than once.
+- You cannot purchase more than 20 hours of courses at once.
 
 
 How I managed the state in this project.
