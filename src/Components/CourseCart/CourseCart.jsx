@@ -1,9 +1,9 @@
-const CourseCart = ({ selectedCourse }) => {
+const CourseCart = ({ selectedCourse, totalHour, remainingHour }) => {
   return (
     <>
       <div className="card w-full bg-base-100 shadow-xl px-8">
         <p className=" pt-8 text-xl font-bold text-blue-500">
-          Credit Hour Remaining 20 hr
+          Credit Hour Remaining {remainingHour} hr
         </p>
         <hr className="w-3/4 mx-auto my-4" />
         <h2 className="mb-3 text-xl font-bold ">Course Name</h2>
@@ -18,9 +18,9 @@ const CourseCart = ({ selectedCourse }) => {
           ))}
           <div>
           <hr className="w-3/4 mx-auto my-4" />
-             <h2 className="font-semibold">Total Credit Hour : 13</h2>
+             <h2 className="font-semibold">Total Credit Hour : {totalHour}</h2>
              <hr className="w-3/4 mx-auto my-4" />
-             <h2 className="font-semibold">Total Price : 48000 USD</h2>
+             <h2 className="font-semibold">Total Price : 200 USD</h2>
           </div>
         </div>
        
