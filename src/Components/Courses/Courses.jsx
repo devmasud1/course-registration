@@ -20,6 +20,7 @@ const Courses = () => {
     const isSelected = selectedCourse.find((crs) => crs.id === course.id);
 
     let currentHours = course.credit;
+    let currentCost = course.price;
 
     if (isSelected) {
       return swal({
@@ -29,9 +30,10 @@ const Courses = () => {
         dangerMode: true,
       });
     } else {
-      selectedCourse.forEach(
-        (cur) => (currentHours = currentHours + cur.credit)
-      );
+      selectedCourse.forEach((cur) => {
+        currentHours = currentHours + cur.credit;
+        currentCost = currentCost + cur.price;
+      });
     }
     const totalRemaining = 20 - currentHours;
 
@@ -44,8 +46,8 @@ const Courses = () => {
       });
     } else {
       setTotalHour(currentHours);
-
       setRemainingHour(totalRemaining);
+      setTotalCost(currentCost);
 
       const newCourse = [...selectedCourse, course];
       setSelectedCourse(newCourse);
@@ -73,6 +75,7 @@ const Courses = () => {
           selectedCourse={selectedCourse}
           totalHour={totalHour}
           remainingHour={remainingHour}
+          totalCost={totalCost}
         ></CourseCart>
       </div>
     </div>
