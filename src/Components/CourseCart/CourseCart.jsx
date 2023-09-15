@@ -2,7 +2,6 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 
-
 const CourseCart = ({
   selectedCourse,
   totalHour,
