@@ -1,14 +1,14 @@
 import { useEffect, useState } from "react";
 import Course from "../Course/Course";
 import CourseCart from "../CourseCart/CourseCart";
-
+import swal from "sweetalert";
 
 const Courses = () => {
   const [course, setCourse] = useState([]);
   const [selectedCourse, setSelectedCourse] = useState([]);
   const [totalCost, setTotalCost] = useState(0);
   const [totalHour, setTotalHour] = useState(0);
-  const [remainingHour, setRemainingHour] = useState(20)
+  const [remainingHour, setRemainingHour] = useState(20);
 
   useEffect(() => {
     fetch("CoursesData.json")
@@ -16,35 +16,40 @@ const Courses = () => {
       .then((data) => setCourse(data));
   }, []);
 
-
- 
-
   const handleAddCourse = (course) => {
     const isSelected = selectedCourse.find((crs) => crs.id === course.id);
 
     let currentHours = course.credit;
-    
+
     if (isSelected) {
-      return alert("Already selected this course");
-    }
-    else{
-      selectedCourse.forEach((cur) =>  currentHours = currentHours + cur.credit )
+      return swal({
+        title: "Already select this course",
+        text: "You may not purchase a course more than once",
+        icon: "success",
+        dangerMode: true,
+      });
+    } else {
+      selectedCourse.forEach(
+        (cur) => (currentHours = currentHours + cur.credit)
+      );
     }
     const totalRemaining = 20 - currentHours;
 
     if (currentHours > 20) {
-      return alert('You cannot buy more than 20 hours')
-    }
-    else{
-
+      return swal({
+        title: "Your remaining hours 0",
+        text: "You cannot purchase more than 20 hours of courses",
+        icon: "warning",
+        dangerMode: true,
+      });
+    } else {
       setTotalHour(currentHours);
-    
-      setRemainingHour(totalRemaining)
-  
+
+      setRemainingHour(totalRemaining);
+
       const newCourse = [...selectedCourse, course];
       setSelectedCourse(newCourse);
     }
-
   };
 
   return (
@@ -64,7 +69,11 @@ const Courses = () => {
       </div>
 
       <div className="w-full lg:w-1/4">
-        <CourseCart selectedCourse={selectedCourse} totalHour={totalHour} remainingHour={remainingHour}></CourseCart>
+        <CourseCart
+          selectedCourse={selectedCourse}
+          totalHour={totalHour}
+          remainingHour={remainingHour}
+        ></CourseCart>
       </div>
     </div>
   );
