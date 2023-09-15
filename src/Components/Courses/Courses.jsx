@@ -13,6 +13,11 @@ const Courses = () => {
   }, []);
 
   const handleAddCourse = (course) => {
+    const isSelected = selectedCourse.find((crs) => crs.id === course.id);
+    if (isSelected) {
+      return alert("already selected");
+    }
+
     const newCourse = [...selectedCourse, course];
     setSelectedCourse(newCourse);
   };

@@ -1,19 +1,29 @@
 const CourseCart = ({ selectedCourse }) => {
   return (
     <>
-      <div className="card w-full bg-base-100 shadow-xl">
-        <p className="px-8 pt-8 text-xl font-bold text-blue-500">
+      <div className="card w-full bg-base-100 shadow-xl px-8">
+        <p className=" pt-8 text-xl font-bold text-blue-500">
           Credit Hour Remaining 20 hr
         </p>
         <hr className="w-3/4 mx-auto my-4" />
-        <h2 className="px-8 mb-4 text-xl font-bold ">Course Name</h2>
-        <div className="card-body pt-0">
+        <h2 className="mb-3 text-xl font-bold ">Course Name</h2>
+        <div className="card-body pt-0 px-0">
           {selectedCourse.map((course, idx) => (
-            <p key={course.id}>
+          <div  key={course.id}>
+            <p>
               {idx + 1} <span>{course.name}</span>
             </p>
+            
+          </div>
           ))}
+          <div>
+          <hr className="w-3/4 mx-auto my-4" />
+             <h2 className="font-semibold">Total Credit Hour : 13</h2>
+             <hr className="w-3/4 mx-auto my-4" />
+             <h2 className="font-semibold">Total Price : 48000 USD</h2>
+          </div>
         </div>
+       
       </div>
     </>
   );
