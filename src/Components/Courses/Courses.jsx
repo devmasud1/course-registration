@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
 import Course from "../Course/Course";
+import CourseCart from "../CourseCart/CourseCart";
 
 const Courses = () => {
   const [course, setCourse] = useState([]);
+  const [selectedCourse, setSelectedCourse] = useState([]);
 
   useEffect(() => {
     fetch("CoursesData.json")
@@ -10,12 +12,29 @@ const Courses = () => {
       .then((data) => setCourse(data));
   }, []);
 
+  const handleAddCourse = (course) => {
+    const newCourse = [...selectedCourse, course];
+    setSelectedCourse(newCourse);
+  };
+
   return (
-    <div className="w-full lg:w-3/4">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-        {course.map((course) => (
-          <Course course={course} key={course.id}></Course>
-        ))}
+    <div className="flex justify-between gap-10">
+      <div className="w-full lg:w-3/4 ">
+        {
+          <div className="grid grid-cols-3">
+            {course.map((course) => (
+              <Course
+                course={course}
+                key={course.id}
+                handleAddCourse={handleAddCourse}
+              ></Course>
+            ))}
+          </div>
+        }
+      </div>
+
+      <div className="w-full lg:w-1/4">
+        <CourseCart selectedCourse={selectedCourse}></CourseCart>
       </div>
     </div>
   );
